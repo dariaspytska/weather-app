@@ -1,5 +1,6 @@
 body {
   font-family: Google Sans, arial, sans-serif;
+  background-color: #58bac9;
 }
 
 .app-border {
@@ -11,17 +12,19 @@ body {
 }
 
 h1 {
-  color: #03070b;
+  color: white;
   font-size: 26px;
   line-height: 26px;
   font-weight: 400;
-  text-align: right;
-}
-
-.rightside {
-  text-align: right;
 }
 
 li {
   list-style-type: none;
+  font-size: 15px;
+  color: white;
+}
+
+.icon-first {
+  width: 40px;
+  height: 40px;
 }
