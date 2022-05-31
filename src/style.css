@@ -13,9 +13,9 @@ body {
 
 h1 {
   color: white;
-  font-size: 26px;
-  line-height: 26px;
+  font-size: 44px;
   font-weight: 400;
+  text-align: center;
 }
 
 li {
@@ -27,4 +27,30 @@ li {
 .icon-first {
   width: 40px;
   height: 40px;
+}
+
+.main-image {
+  width: 200px;
+  padding: 0%;
+}
+
+p {
+  font-size: 15px;
+}
+
+.first-colon {
+  color: white;
+  padding: 30px 0 0 20px;
+  text-align: center;
+ 
+}
+
+.temp p {
+  display: inline;
+  padding-top: 30px;
+  
+}
+
+.main-temp {
+  font-size: 60px;
 }
