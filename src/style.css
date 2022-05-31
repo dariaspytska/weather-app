@@ -46,12 +46,12 @@ p {
  
 }
 
-.temp p {
-  display: inline;
-}
-
 .main-temp {
   font-size: 60px;
+}
+
+.temp {
+  margin-bottom: 0;
 }
 
 small {
