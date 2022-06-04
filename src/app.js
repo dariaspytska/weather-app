@@ -37,6 +37,9 @@ function addDate(dayTime) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  //if (hours < 5 || hours > 19) {
+     //document.body.style.bgColor = "#494E60";
+ // }
 
   return `${day} ${hours}:${minutes}`;
 }
