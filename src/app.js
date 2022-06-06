@@ -46,7 +46,7 @@ function addDate(dayTime) {
 
 function showTemp(resp) {
   let tempElement = document.querySelector("#temperature");
-  tempElement.innerHTML = Math.round(resp.data.main.temp);
+  tempElement.innerHTML = Math.round(celciumTemperature);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = resp.data.name;
   let descriptionElement = document.querySelector("#condition");
@@ -59,6 +59,7 @@ function showTemp(resp) {
   dateElement.innerHTML = addDate(resp.data.dt * 1000);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `${iconShow(resp.data.weather[0].main)}`);
+  celciumTemperature = resp.data.main.temp;
 }
 
 function search(city) {
@@ -71,6 +72,28 @@ function handleSearch(event){
   let cityElem = document.querySelector("#city-search");
   search(cityElem.value);
 }
+function farenheitConvert(event){
+  event.preventDefault();
+  let convert = document.querySelector("#temperature");
+  let newConv = (celciumTemperature * 9)/5 + 32;
+  convert.innerHTML = Math.round(newConv);
+}
+
+function celciumConvert(event) {
+  event.preventDefault();
+  let convert = document.querySelector("#temperature");
+  convert.innerHTML = Math.round(celciumTemperature);
+}
+
+let celciumTemperature = null;
 
 let form = document.querySelector("#button-addon2");
 form.addEventListener("click", handleSearch);
+
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", farenheitConvert);
+
+let celciumLink = document.querySelector("#celcium-link");
+celciumLink.addEventListener("click", celciumConvert);
+
+search("Kyiv");
