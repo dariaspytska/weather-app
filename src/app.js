@@ -64,6 +64,6 @@ function showTemp(resp) {
 
 
 let apiKey = "9eac88714aa707593c33f048a9d7da34";
-let city = "Tokmak";
+let city = "New York";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(showTemp);

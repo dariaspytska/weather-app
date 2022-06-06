@@ -18,16 +18,17 @@ h1 {
   font-size: 38px;
   font-weight: 400;
   text-align: center;
+  margin-top: 30px;
 }
 
 li {
   list-style-type: none;
   font-size: 15px;
-  
+  margin-top: 5px;
 }
 
 li:first-letter {
-text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .icon-first {
@@ -52,6 +53,7 @@ p {
 
 .main-temp {
   font-size: 60px;
+  margin-top: 10px;
 }
 
 .temp {
@@ -65,5 +67,5 @@ small {
 
 .form {
   border: 1px solid white;
-   box-shadow: -1px -1px 32px 8px rgba(255, 255, 255, 0.59);
+  box-shadow: -1px -1px 32px 8px rgba(255, 255, 255, 0.59);
 }
