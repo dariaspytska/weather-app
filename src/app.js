@@ -1,4 +1,3 @@
-
 function iconShow(iconName) {
   let icon = iconName;
   if (icon === "Thunderstorm") {
@@ -38,15 +37,15 @@ function addDate(dayTime) {
     minutes = `0${minutes}`;
   }
   //if (hours < 5 || hours > 19) {
-     //document.body.style.bgColor = "#494E60";
- // }
+  //document.body.style.bgColor = "#494E60";
+  // }
 
   return `${day} ${hours}:${minutes}`;
 }
 
 function showTemp(resp) {
   let tempElement = document.querySelector("#temperature");
-  tempElement.innerHTML = Math.round(celciumTemperature);
+  tempElement.innerHTML = Math.round(resp.data.main.temp);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = resp.data.name;
   let descriptionElement = document.querySelector("#condition");
@@ -67,15 +66,15 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
 }
-function handleSearch(event){
+function handleSearch(event) {
   event.preventDefault();
   let cityElem = document.querySelector("#city-search");
   search(cityElem.value);
 }
-function farenheitConvert(event){
+function farenheitConvert(event) {
   event.preventDefault();
   let convert = document.querySelector("#temperature");
-  let newConv = (celciumTemperature * 9)/5 + 32;
+  let newConv = (celciumTemperature * 9) / 5 + 32;
   convert.innerHTML = Math.round(newConv);
 }
 
