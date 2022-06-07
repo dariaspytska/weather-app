@@ -105,8 +105,8 @@ function celciumConvert(event) {
 
 let celciumTemperature = null;
 
-let form = document.querySelector("#button-addon2");
-form.addEventListener("click", handleSearch);
+let form = document.querySelector("#form-search");
+form.addEventListener("submit", handleSearch);
 
 let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", farenheitConvert);

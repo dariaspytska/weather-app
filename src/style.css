@@ -82,6 +82,7 @@ small {
 
 .weather-forecast {
   text-align: center;
+  margin-top: 5px;
 }
 
 .weather-forecast-date {
