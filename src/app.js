@@ -43,6 +43,25 @@ function addDate(dayTime) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img src="img/rain.a56a7915.svg" alt="" width="48px" />
+              <div class="weather-forecast-temp">
+                <span class="forecast-temp-max">18°</span>
+                <span class="forecast-temp-min">12°</span>
+              </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
 function showTemp(resp) {
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(resp.data.main.temp);
@@ -96,3 +115,4 @@ let celciumLink = document.querySelector("#celcium-link");
 celciumLink.addEventListener("click", celciumConvert);
 
 search("Kyiv");
+displayForecast();
