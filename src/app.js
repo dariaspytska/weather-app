@@ -3,7 +3,7 @@ function iconShow(iconName) {
   if (icon === "Thunderstorm") {
     return "img/thunderstorm.7e644c1a.svg";
   } else if (icon === "Clear") {
-    return "img/sun (1).png";
+    return "img/icons8-sun-104.svg";
   } else if (icon === "Clouds") {
     return "img/cloud.2b02f907.svg";
   } else if (icon === "Drizzle") {
