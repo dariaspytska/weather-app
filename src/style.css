@@ -6,7 +6,7 @@ body {
 
 .app-border {
   max-width: 600px;
-  margin: 100px auto;
+  margin: 100px auto 20px;
   padding: 20px;
   border: 1px solid #89d3e2;
   border-radius: 5px;
