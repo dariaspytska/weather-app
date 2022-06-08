@@ -83,11 +83,13 @@ small {
 .weather-forecast {
   text-align: center;
   margin-top: 5px;
+  margin-bottom: 18px;
 }
 
 .weather-forecast-date {
   font-size: 16px;
   opacity: 0.7;
+
 }
 
 .weather-forecast-temp {
