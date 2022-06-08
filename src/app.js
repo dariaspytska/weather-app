@@ -43,7 +43,14 @@ function addDate(dayTime) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayCoordinates(coords) {
+ let apiKey = "9eac88714aa707593c33f048a9d7da34";
+ let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(resp) {
+  console.log(resp.data.daily);
   let forecast = document.querySelector("#forecast");
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHTML = `<div class="row">`;
@@ -78,6 +85,7 @@ function showTemp(resp) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `${iconShow(resp.data.weather[0].main)}`);
   celciumTemperature = resp.data.main.temp;
+  displayCoordinates(resp.data.coord);
 }
 
 function search(city) {
@@ -115,4 +123,3 @@ let celciumLink = document.querySelector("#celcium-link");
 celciumLink.addEventListener("click", celciumConvert);
 
 search("Kyiv");
-displayForecast();
