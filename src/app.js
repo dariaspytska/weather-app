@@ -115,28 +115,7 @@ function handleSearch(event) {
   let cityElem = document.querySelector("#city-search");
   search(cityElem.value);
 }
-function farenheitConvert(event) {
-  event.preventDefault();
-  let convert = document.querySelector("#temperature");
-  let newConv = (celciumTemperature * 9) / 5 + 32;
-  convert.innerHTML = Math.round(newConv);
-}
-
-function celciumConvert(event) {
-  event.preventDefault();
-  let convert = document.querySelector("#temperature");
-  convert.innerHTML = Math.round(celciumTemperature);
-}
-
-let celciumTemperature = null;
-
 let form = document.querySelector("#form-search");
 form.addEventListener("submit", handleSearch);
-
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", farenheitConvert);
-
-let celciumLink = document.querySelector("#celcium-link");
-celciumLink.addEventListener("click", celciumConvert);
 
 search("Kyiv");
