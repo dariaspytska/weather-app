@@ -118,4 +118,7 @@ function handleSearch(event) {
 let form = document.querySelector("#form-search");
 form.addEventListener("submit", handleSearch);
 
+let button = document.querySelector("#button-addon2");
+button.addEventListener("click", handleSearch);
+
 search("Kyiv");
